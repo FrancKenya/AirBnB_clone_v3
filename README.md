@@ -1,4 +1,4 @@
-# AirBnB Clone - The Console
+lslsrBnB Clone - The Console
 The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
 
 #### Functionalities of this command interpreter:
@@ -163,6 +163,22 @@ Public Domain. No copy write protection.
 
 Forked from ALexa Orrico repo to be used for academic purposes
 ===============================================================
+
+Added a a RESTful API for the AirBnB clone, implemented using Flask. The API allows users to interact with the AirBnB clone database to perform CRUD operations on various resources such as users, places, reviews, and more.
+
+Features
+User authentication and management
+CRUD operations for places, reviews, amenities, and more
+JSON-based API responses
+Support for both file and database storage
+Comprehensive unit tests
+Requirements
+Ubuntu 20.04 LTS
+Python 3.4.3 or higher
+Flask
+SQLAlchemy
+MySQL server (for DB storage)
+pep8 for code style checking
 
 ## Added developers
 1. James Odera
