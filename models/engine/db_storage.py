@@ -21,7 +21,7 @@ classes = {"Amenity": Amenity, "City": City,
 
 
 class DBStorage:
-    """interaacts with the MySQL database"""
+    """interiaacts with the MySQL database"""
     __engine = None
     __session = None
 
@@ -50,6 +50,32 @@ class DBStorage:
                     key = obj.__class__.__name__ + '.' + obj.id
                     new_dict[key] = obj
         return (new_dict)
+
+    def get(self, cls, id):
+        """ Retrieves an object
+        Args: cls - Class
+              id - represents an object id
+        Returns: object based on the class and its ID, or None if not found
+        """
+        fetched_items = self.all(cls).values()
+        for obj in fetched_items:
+            if obj.id == id:
+                return obj
+            else:
+                return None
+
+    def count(self, cls=None):
+        """ counts the number of objects in storage
+        Args: cls - optional class
+        Returns: the number of objects in storage matching the given class or
+        the count of all objects in storage if no class is passed """
+
+        count = 0
+        if not cls:
+            count = len(self.all(cls).values())
+        else:
+            count = len(self.all(cls).values())
+        return count
 
     def new(self, obj):
         """add the object to the current database session"""
