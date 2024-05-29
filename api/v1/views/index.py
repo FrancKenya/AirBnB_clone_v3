@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """ Handles root status """
 
 from api.v1.views import app_views

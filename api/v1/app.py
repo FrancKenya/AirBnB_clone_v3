@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """ manages  the control of Flask """
 
 from models import storage
