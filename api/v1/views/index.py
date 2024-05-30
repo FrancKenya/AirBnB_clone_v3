@@ -16,3 +16,17 @@ from models.user import User
 def route_status():
     """ returns base route status """
     return jsonify({"status": "OK"})
+
+
+@app_views.route("/stats", strict_slashes=False, methods=["GET"])
+def stats_count():
+    """returns object counts in json format"""
+    return jsonify(
+        {
+            "amenities": storage.count(Amenity),
+            "cities": storage.count(City),
+            "places": storage.count(Place),
+            "reviews": storage.count(Review),
+            "states": storage.count(State),
+            "users": storage.count(User)
+        })
