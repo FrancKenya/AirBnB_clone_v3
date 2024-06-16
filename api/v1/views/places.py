@@ -4,10 +4,7 @@ This module handles url views interaction with places sql table
 """
 
 from api.v1.views import app_views
-from flask import abort
-from flask import jsonify
-from flask import make_response
-from flask import request
+from flask import *
 from models import storage
 from models.amenity import Amenity
 from models.city import City
